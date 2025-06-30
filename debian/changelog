@@ -1,3 +1,10 @@
+libdumb (1:0.9.3-7.1deepin1) unstable; urgency=medium
+
+  * Strip t64
+  * 
+
+ -- Cryolitia <cryolitia@deepin.org>  Mon, 30 Jun 2025 14:47:51 +0800
+
 libdumb (1:0.9.3-7) unstable; urgency=medium
 
   * Team upload.
