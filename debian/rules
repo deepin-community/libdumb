@@ -42,24 +42,24 @@ override_dh_auto_build:
 	rm -f libdumb.so
 
 override_dh_auto_install:
-	dh_install -plibdumb1t64 libdumb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)
-	dh_install -plibaldmb1t64 libaldmb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)
+	dh_install -plibdumb1 libdumb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)
+	dh_install -plibaldmb1 libaldmb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)
 	dh_install -plibdumb1-dev libdumb.a usr/lib/$(DEB_HOST_MULTIARCH)
 	dh_install -plibaldmb1-dev libaldmb.a usr/lib/$(DEB_HOST_MULTIARCH)
 	dh_install -plibdumb1-dev include/dumb.h usr/include
 	dh_install -plibaldmb1-dev include/aldumb.h usr/include
 
 override_dh_link:
-	dh_link -plibdumb1t64 usr/lib/$(DEB_HOST_MULTIARCH)/libdumb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/libdumb.so.1
+	dh_link -plibdumb1 usr/lib/$(DEB_HOST_MULTIARCH)/libdumb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/libdumb.so.1
 	dh_link -plibdumb1-dev usr/lib/$(DEB_HOST_MULTIARCH)/libdumb.so.1 usr/lib/$(DEB_HOST_MULTIARCH)/libdumb.so
-	dh_link -plibaldmb1t64 usr/lib/$(DEB_HOST_MULTIARCH)/libaldmb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/libaldmb.so.1
+	dh_link -plibaldmb1 usr/lib/$(DEB_HOST_MULTIARCH)/libaldmb.so.1.0.0 usr/lib/$(DEB_HOST_MULTIARCH)/libaldmb.so.1
 	dh_link -plibaldmb1-dev usr/lib/$(DEB_HOST_MULTIARCH)/libaldmb.so.1 usr/lib/$(DEB_HOST_MULTIARCH)/libaldmb.so
 
 override_dh_installdocs:
-	dh_installdocs -plibdumb1t64
-	dh_installdocs -plibaldmb1t64
-	dh_installdocs -plibdumb1-dev --link-doc=libdumb1t64
-	dh_installdocs -plibaldmb1-dev --link-doc=libdumb1t64
+	dh_installdocs -plibdumb1
+	dh_installdocs -plibaldmb1
+	dh_installdocs -plibdumb1-dev --link-doc=libdumb1
+	dh_installdocs -plibaldmb1-dev --link-doc=libdumb1
 
 override_dh_installchangelogs:
 	dh_installchangelogs release.txt
